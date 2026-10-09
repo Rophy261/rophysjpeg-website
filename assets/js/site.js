@@ -71,7 +71,6 @@
   var links = Array.prototype.slice.call(doc.querySelectorAll("[data-gallery] .zoom"));
   if (box && links.length) {
     var bImg = box.querySelector("[data-lightbox-img]");
-    var bCap = box.querySelector("[data-lightbox-caption]");
     var bCount = box.querySelector("[data-lightbox-count]");
     var bClose = box.querySelector("[data-lightbox-close]");
     var bPrev = box.querySelector("[data-lightbox-prev]");
@@ -95,7 +94,6 @@
       bImg.srcset = a.getAttribute("data-full-srcset");
       bImg.src = a.href;
       bImg.alt = thumb.alt;
-      bCap.textContent = a.getAttribute("data-caption") || "";
       bCount.textContent = (current + 1) + " / " + links.length;
       preload(current + 1); preload(current - 1);
     };
@@ -140,6 +138,49 @@
       if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(current + (dx < 0 ? 1 : -1));
       sx = sy = null;
     });
+  }
+
+  /* ------------------------------------------------------- instagram feed */
+  var feedEl = doc.querySelector("[data-instagram-feed]");
+  var igCfg = (window.ROPHYSJPEG_CONFIG && window.ROPHYSJPEG_CONFIG.instagramFeed) || {};
+  if (feedEl && igCfg.enabled && /^https:\/\/\S+$/.test(igCfg.feedUrl || "")) {
+    var count = igCfg.count || 6;
+    var thumbOf = function (post) {
+      var sz = post.sizes || {};
+      var pick = (sz.medium && sz.medium.mediaUrl) || (sz.small && sz.small.mediaUrl) || (sz.large && sz.large.mediaUrl);
+      if (pick) return pick;
+      if (post.thumbnailUrl) return post.thumbnailUrl;
+      if (post.mediaType === "VIDEO") return null;
+      if (post.mediaType === "CAROUSEL_ALBUM" && post.children && post.children.length) {
+        var c = post.children.filter(function (x) { return x.mediaType !== "VIDEO"; })[0];
+        if (c) return c.mediaUrl;
+      }
+      return post.mediaUrl || null;
+    };
+    fetch(igCfg.feedUrl, { headers: { Accept: "application/json" } })
+      .then(function (r) { if (!r.ok) throw new Error("feed " + r.status); return r.json(); })
+      .then(function (data) {
+        var posts = Array.isArray(data) ? data : (data.posts || data.media || []);
+        var items = posts.map(function (p) { return { p: p, src: thumbOf(p) }; })
+          .filter(function (x) { return x.src && x.p.permalink; }).slice(0, count);
+        if (!items.length) return;
+        var ul = doc.createElement("ul");
+        ul.className = "ig-grid";
+        items.forEach(function (x, i) {
+          var cap = (x.p.prunedCaption || x.p.caption || "").replace(/\s+/g, " ").trim();
+          var li = doc.createElement("li");
+          var a = doc.createElement("a");
+          a.href = x.p.permalink; a.target = "_blank"; a.rel = "noopener";
+          a.setAttribute("aria-label", "Instagram post " + (i + 1) + " (opens in a new tab)" + (cap ? ": " + cap.slice(0, 120) : ""));
+          var img = doc.createElement("img");
+          img.src = x.src; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+          img.width = 600; img.height = 600;
+          a.appendChild(img); li.appendChild(a); ul.appendChild(li);
+        });
+        feedEl.appendChild(ul);
+        feedEl.hidden = false;
+      })
+      .catch(function () { /* feed unavailable: the profile link below stays visible */ });
   }
 
   /* ----------------------------------------------------------- contact form */
