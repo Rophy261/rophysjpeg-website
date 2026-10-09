@@ -245,6 +245,7 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .about-text { text-align: center; }
 .about-text a { overflow-wrap: anywhere; }
 .about-text h1 { color: var(--white); margin-bottom: 20px; }
+.about-text h2 { margin-top: 30px; }
 
 /* Contact */
 .contact-intro, .contact-form-row { width: min(56vw, 700px); }
