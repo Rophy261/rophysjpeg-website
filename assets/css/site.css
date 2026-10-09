@@ -233,7 +233,7 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .content-page a:not(.btn):hover { color: var(--red); }
 
 /* Video page: featured film, hover-preview grid, pop-up player */
-.video-page { padding: 0 0 60px; }
+.video-page { padding: 3vw 0 60px; }
 .vkicker, .vtag {
   display: block; margin: 0; font-family: var(--font-main); font-size: 12px; line-height: 1.4;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--red);
