@@ -245,12 +245,6 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .about-text { text-align: center; }
 .about-text a { overflow-wrap: anywhere; }
 .about-text h1 { color: var(--white); margin-bottom: 20px; }
-.about-instagram { text-align: center; padding-top: 72px; }
-.about-instagram h2 { margin-bottom: 40px; }
-.ig-grid { list-style: none; margin: 0 auto 28px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 1064px; }
-.ig-grid a { display: block; }
-.ig-grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #111; transition: opacity 200ms ease; }
-.ig-grid a:hover img { opacity: 0.85; }
 
 /* Contact */
 .contact-intro, .contact-form-row { width: min(56vw, 700px); }
@@ -327,8 +321,6 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
   .title-text h1 { font-size: 8vw; }
 
   .about-intro { grid-template-columns: 1fr; gap: 28px; }
-  .about-instagram { padding-top: 24px; }
-  .ig-grid { gap: 6px; }
   .content-page h1, .content-page h2 { font-size: clamp(16px, 6vw, 32px); }
   .content-page p { font-size: 14px; }
   .field-grid { grid-template-columns: 1fr; }

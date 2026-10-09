@@ -31,21 +31,5 @@ window.ROPHYSJPEG_CONFIG = {
     successMessage: "Thank you. Your message has been sent.",
     errorMessage: "Sorry, your message could not be sent. Please try again later or reach out on Instagram or LinkedIn.",
     unavailableMessage: "Message delivery has not been set up for this website yet, so this form cannot send messages. Please reach out on Instagram or LinkedIn in the meantime."
-  },
-
-  /* INSTAGRAM FEED (About page)
-     Instagram no longer allows a website to read a feed without an authorised
-     connection, so the feed comes through Behold (https://behold.so, free plan:
-     1 feed, 6 posts, refreshed daily, 1,200 views a month).
-       1. Sign in at behold.so, connect the @rophysjpeg Instagram account
-          (it must be a Professional - Creator or Business - account).
-       2. Create a feed and copy its JSON feed URL (https://feeds.behold.so/...).
-       3. Paste it below, set enabled: true and redeploy.
-     If the feed is off, empty or over its monthly limit, the About page simply
-     shows the "View @rophysjpeg on Instagram" link instead. */
-  instagramFeed: {
-    enabled: false,
-    feedUrl: "",
-    count: 6
   }
 };
