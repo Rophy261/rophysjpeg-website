@@ -195,6 +195,22 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .progress-indicator .stroke { stroke-dasharray: 231; stroke-dashoffset: 0; }
 @media (max-height: 560px) { .progress-indicator { display: none; } }
 
+/* Gallery intro box (editorial & commercial projects) */
+.gallery-intro {
+  width: min(660px, 90vw); margin: 10px auto 3.5vw; padding: 28px 32px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.22); text-align: center;
+}
+.gallery-intro .gi-kicker {
+  margin: 0 0 8px; font-family: var(--font-main); font-size: 12px; line-height: 1.4;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--red);
+}
+.gallery-intro h1 { margin: 0 0 12px; font-family: var(--font-main); font-weight: 400; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2; color: var(--white); }
+.gallery-intro .gi-text { margin: 0; font-family: var(--font-main); font-size: 14px; line-height: 1.7; color: var(--white); }
+.gallery-intro .gi-credit { margin: 14px 0 0; font-family: var(--font-mono); font-weight: 200; font-size: 13px; color: rgba(255, 255, 255, 0.85); }
+@media (max-width: 1024px) {
+  .gallery-intro { margin: 20px auto 6vw; padding: 22px 20px; }
+}
+
 /* ---------- Lightbox -------------------------------------------------- */
 .lightbox {
   position: fixed; inset: 0; z-index: 50;
