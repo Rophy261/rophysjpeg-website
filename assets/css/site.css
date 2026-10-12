@@ -206,6 +206,9 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 }
 .gallery-intro h1 { margin: 0 0 12px; font-family: var(--font-main); font-weight: 400; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2; color: var(--white); }
 .gallery-intro .gi-text { margin: 0; font-family: var(--font-main); font-size: 14px; line-height: 1.7; color: var(--white); }
+.gallery-intro .gi-link { margin: 14px 0 0; font-family: var(--font-main); font-size: 13px; }
+.gallery-intro .gi-link a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.gallery-intro .gi-link a:hover { color: var(--red); }
 .gallery-intro .gi-credit { margin: 14px 0 0; font-family: var(--font-mono); font-weight: 200; font-size: 13px; color: rgba(255, 255, 255, 0.85); }
 @media (max-width: 1024px) {
   .gallery-intro { margin: 20px auto 6vw; padding: 22px 20px; }
