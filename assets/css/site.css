@@ -206,6 +206,8 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 }
 .gallery-intro h1 { margin: 0 0 12px; font-family: var(--font-main); font-weight: 400; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.2; color: var(--white); }
 .gallery-intro .gi-text { margin: 0; font-family: var(--font-main); font-size: 14px; line-height: 1.7; color: var(--white); }
+.gallery-intro .gi-inline { color: var(--white); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; white-space: nowrap; }
+.gallery-intro .gi-inline:hover { color: var(--red); }
 .gallery-intro .gi-link { margin: 14px 0 0; font-family: var(--font-main); font-size: 13px; }
 .gallery-intro .gi-link a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 .gallery-intro .gi-link a:hover { color: var(--red); }
