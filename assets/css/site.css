@@ -346,6 +346,8 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .about-text a { overflow-wrap: anywhere; }
 .about-text h1 { color: var(--white); margin-bottom: 20px; }
 .about-text h2 { margin-top: 30px; }
+.about-text a[href^="mailto:"] { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.about-text a[href^="mailto:"]:hover, .about-text a[href^="mailto:"]:focus-visible { color: var(--red); }
 
 /* Contact */
 .contact-intro, .contact-form-row { width: min(56vw, 700px); }
