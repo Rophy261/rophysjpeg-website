@@ -222,7 +222,7 @@
 
     // grid cards: silent preview on hover / keyboard focus (desktop pointers only)
     if (canHover && !reduceMotion) {
-      Array.prototype.forEach.call(doc.querySelectorAll(".vcard"), function (card) {
+      Array.prototype.forEach.call(doc.querySelectorAll(".vcard[data-src]"), function (card) {
         var pv = null;
         var start = function () {
           if (!pv) {
@@ -245,6 +245,43 @@
         card.addEventListener("blur", stop);
       });
     }
+  }
+
+
+  /* ---------------------------------------------------- gallery peek (home) */
+  if (window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    Array.prototype.forEach.call(doc.querySelectorAll("[data-peek]"), function (card) {
+      var urls = (card.getAttribute("data-peek") || "").split(" ").filter(Boolean);
+      if (!urls.length) return;
+      var thumb = card.querySelector(".vthumb");
+      var layer = null, timer = null, k = 0, loaded = false;
+      var next = function () {
+        if (!layer) {
+          layer = doc.createElement("img");
+          layer.className = "vpeek";
+          layer.alt = "";
+          layer.setAttribute("aria-hidden", "true");
+          thumb.insertBefore(layer, thumb.querySelector(".vgal"));
+        }
+        layer.src = urls[k % urls.length];
+        k += 1;
+        layer.classList.add("is-on");
+      };
+      var start = function () {
+        if (!loaded) { urls.forEach(function (u) { var im = new Image(); im.src = u; }); loaded = true; }
+        clearInterval(timer);
+        timer = setTimeout(function () { next(); timer = setInterval(next, 1100); }, 350);
+      };
+      var stop = function () {
+        clearTimeout(timer); clearInterval(timer); timer = null; k = 0;
+        if (layer) layer.classList.remove("is-on");
+      };
+      card.addEventListener("mouseenter", start);
+      card.addEventListener("mouseleave", stop);
+      card.addEventListener("focus", start);
+      card.addEventListener("blur", stop);
+    });
   }
 
   /* ----------------------------------------------------------- contact form */
