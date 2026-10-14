@@ -479,6 +479,12 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .ct .ct-status[data-state="success"] { color: var(--white) !important; }
 .ct .ct-status a { color: var(--white); }
 
+.ct-one { max-width: 680px; }
+.ct-one h1 { font-size: clamp(36px, 4.4vw, 60px) !important; line-height: 1.1 !important; margin-bottom: 20px !important; }
+.ct-one > p { font-size: 15px !important; line-height: 1.75 !important; }
+.ct-simple .ct-form { margin-top: 34px; display: grid; gap: 20px; }
+.ct-req { color: rgba(255, 255, 255, 0.55); }
+.ct-simple .ct-submit { margin-top: 6px; justify-self: start; }
 @media (max-width: 1024px) {
   .ab-intro, .ab-story, .ct-wrap { grid-template-columns: 1fr; gap: 32px; }
   .ab-story h2 { margin-bottom: 10px !important; }
