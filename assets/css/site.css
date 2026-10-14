@@ -480,6 +480,9 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .ct .ct-status a { color: var(--white); }
 
 .ct-one { max-width: 680px; }
+.ab-contact { border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 3vw !important; padding-top: 5vw !important; }
+.ab-contact h2 { font-size: clamp(30px, 3.4vw, 50px) !important; line-height: 1.15 !important; margin-bottom: 18px !important; }
+
 .ct-one h1 { font-size: clamp(36px, 4.4vw, 60px) !important; line-height: 1.1 !important; margin-bottom: 20px !important; }
 .ct-one > p { font-size: 15px !important; line-height: 1.75 !important; }
 .ct-simple .ct-form { margin-top: 34px; display: grid; gap: 20px; }
