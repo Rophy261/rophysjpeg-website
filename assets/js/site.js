@@ -290,66 +290,66 @@
     var cfg = (window.ROPHYSJPEG_CONFIG && window.ROPHYSJPEG_CONFIG.contactForm) || {};
     var submit = form.querySelector("[data-contact-submit]");
     var status = form.querySelector("[data-contact-status]");
-    var unavailable = cfg.unavailableMessage || status.textContent;
-
-    var configured = !!(cfg.enabled &&
-      /^https:\/\/\S+$/.test(cfg.endpoint || "") &&
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cfg.recipient || "") &&
+    var recipient = form.getAttribute("data-recipient");
+    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var useService = !!(cfg.enabled && /^https:\/\/\S+$/.test(cfg.endpoint || "") &&
       (cfg.provider !== "web3forms" || (cfg.accessKey || "").length > 10));
-
     var setStatus = function (msg, state) {
       status.textContent = msg;
       if (state) status.setAttribute("data-state", state); else status.removeAttribute("data-state");
     };
+    var val = function (n) { var el = form.elements[n]; return el && el.value ? el.value.trim() : ""; };
 
-    if (!configured) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (val("_gotcha")) return; // bot
+      var name = form.elements.name, email = form.elements.email, message = form.elements.message;
+      [name, email, message].forEach(function (f) { f.removeAttribute("aria-invalid"); });
+      var bad = [name, message].filter(function (f) { return !f.value.trim(); });
+      if (!emailRe.test(email.value.trim())) bad.splice(1, 0, email);
+      if (bad.length) {
+        bad.forEach(function (f) { f.setAttribute("aria-invalid", "true"); });
+        setStatus("Please add your name, a valid email address and a few words about the project.", "error");
+        bad[0].focus();
+        return;
+      }
+      var services = Array.prototype.filter.call(form.querySelectorAll('input[name="services"]'), function (c) { return c.checked; })
+        .map(function (c) { return c.value; }).join(", ");
+      var rows = [["Name", val("name")], ["Email", val("email")], ["Phone", val("phone")], ["Brand / club / team", val("organization")],
+                  ["Needs", services], ["Date", val("date")], ["Location", val("location")], ["Budget", val("budget")]];
+      var subject = "Project inquiry from " + val("name") + (val("organization") ? " (" + val("organization") + ")" : "");
+
+      if (!useService) {
+        var body = rows.filter(function (r) { return r[1]; }).map(function (r) { return r[0] + ": " + r[1]; }).join("\n") +
+          "\n\n" + val("message");
+        window.location.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        setStatus("Your email app should open with everything filled in. Just press send. If nothing opened, email " + recipient + " directly.", "success");
+        return;
+      }
+      var data = new FormData();
+      rows.forEach(function (r) { if (r[1]) data.append(r[0], r[1]); });
+      data.append("message", val("message"));
+      if (cfg.provider === "web3forms") {
+        data.append("access_key", cfg.accessKey);
+        data.append("subject", subject);
+        data.append("from_name", "rophysjpeg.com");
+        data.append("replyto", val("email"));
+      } else {
+        data.append("_replyto", val("email"));
+        data.append("_subject", subject);
+      }
       submit.disabled = true;
-      submit.setAttribute("aria-describedby", "cf-status-msg");
-      status.id = "cf-status-msg";
-      setStatus(unavailable, "unavailable");
-      form.addEventListener("submit", function (e) { e.preventDefault(); });
-    } else {
-      submit.disabled = false;
-      setStatus("", null);
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var name = form.elements.name, email = form.elements.email, message = form.elements.message;
-        var bad = [name, email, message].filter(function (f) { return !f.value.trim(); });
-        if (!bad.length && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) bad = [email];
-        [name, email, message].forEach(function (f) { f.removeAttribute("aria-invalid"); });
-        if (bad.length) {
-          bad.forEach(function (f) { f.setAttribute("aria-invalid", "true"); });
-          setStatus("Please fill in your name, a valid email address and a message.", "error");
-          bad[0].focus();
-          return;
-        }
-        if (form.elements._gotcha && form.elements._gotcha.value) return; // bot
-        var data = new FormData();
-        data.append("name", name.value.trim());
-        data.append("email", email.value.trim());
-        data.append("message", message.value.trim());
-        if (cfg.provider === "web3forms") {
-          data.append("access_key", cfg.accessKey);
-          data.append("subject", cfg.subject || "Website message");
-          data.append("from_name", "rophysjpeg.com");
-        } else {
-          data.append("_replyto", email.value.trim());
-          data.append("_subject", cfg.subject || "Website message");
-        }
-        submit.disabled = true;
-        setStatus("Sending…", null);
-        fetch(cfg.endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
-          .then(function (res) {
-            return res.json().catch(function () { return {}; }).then(function (json) {
-              var ok = res.ok && json.success !== false && !json.errors;
-              if (!ok) throw new Error("delivery failed");
-              form.reset();
-              setStatus(cfg.successMessage || "Your message has been sent.", "success");
-            });
-          })
-          .catch(function () { setStatus(cfg.errorMessage || "Your message could not be sent.", "error"); })
-          .then(function () { submit.disabled = false; });
-      });
-    }
+      setStatus("Sending…", null);
+      fetch(cfg.endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (json) {
+            if (!(res.ok && json.success !== false && !json.errors)) throw new Error("delivery failed");
+            form.reset();
+            setStatus(cfg.successMessage || "Thanks! Your message has been sent. I’ll get back to you soon.", "success");
+          });
+        })
+        .catch(function () { setStatus("Your message could not be sent. Please email " + recipient + " directly.", "error"); })
+        .then(function () { submit.disabled = false; });
+    });
   }
 })();
