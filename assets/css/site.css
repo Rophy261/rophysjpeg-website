@@ -454,11 +454,11 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 18px; }
 .ct-field { display: flex; flex-direction: column; min-width: 0; margin: 0; padding: 0; border: 0; }
 .ct-full { grid-column: 1 / -1; }
-.ct-field > label, .ct-field legend { margin-bottom: 8px; padding: 0; font-family: var(--font-mono); font-weight: 200; font-size: 13px; color: rgba(255, 255, 255, 0.85); }
+.ct-field > label, .ct-field legend { margin-bottom: 10px; padding: 0; font-family: var(--font-main); font-weight: 400; font-size: 16px; letter-spacing: 0.01em; color: var(--white); }
 .ct-field input, .ct-field select, .ct-field textarea {
   width: 100%; margin: 0; background: #0b0b0b; color: var(--white);
   font-family: var(--font-main); font-size: 15px; line-height: 1.4;
-  border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 0; padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 0; padding: 14px;
 }
 .ct-field select { appearance: none; -webkit-appearance: none; padding-right: 40px; cursor: pointer;
   background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%);
@@ -486,7 +486,7 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .ct-one h1 { font-size: clamp(36px, 4.4vw, 60px) !important; line-height: 1.1 !important; margin-bottom: 20px !important; }
 .ct-one > p { font-size: 15px !important; line-height: 1.75 !important; }
 .ct-simple .ct-form { margin-top: 34px; display: grid; gap: 20px; }
-.ct-req { color: rgba(255, 255, 255, 0.55); }
+.ct-req { font-size: 13px; color: rgba(255, 255, 255, 0.75); }
 .ct-simple .ct-submit { margin-top: 6px; justify-self: start; }
 @media (max-width: 1024px) {
   .ab-intro, .ab-story, .ct-wrap { grid-template-columns: 1fr; gap: 32px; }
