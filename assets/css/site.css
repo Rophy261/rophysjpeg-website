@@ -74,7 +74,7 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 
 /* ---------- Header ---------------------------------------------------- */
 .site-header {
-  position: fixed; top: 0; left: 0; width: 100%;
+  position: absolute; top: 0; left: 0; width: 100%;   /* scrolls away with the page so it never covers content */
   padding: var(--header-pad-y) 3vw;
   z-index: 20;
   pointer-events: none;            /* transparent header: clicks pass through gaps */
