@@ -165,10 +165,21 @@
     var loadItem = function (i) {
       vcur = (i + items.length) % items.length;
       var a = items[vcur];
+      var yt = a.getAttribute("data-youtube");
+      var mYt = vmodal.querySelector("[data-vmodal-yt]");
       mVideo.pause();
-      mVideo.poster = a.getAttribute("data-poster");
-      mVideo.src = a.getAttribute("data-src");
-      mVideo.setAttribute("aria-label", a.getAttribute("data-title"));
+      if (yt && mYt) {
+        mVideo.removeAttribute("src"); mVideo.load(); mVideo.hidden = true;
+        mYt.hidden = false;
+        mYt.title = a.getAttribute("data-title");
+        mYt.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(yt) + "?autoplay=1&rel=0&playsinline=1";
+      } else {
+        if (mYt) { mYt.hidden = true; mYt.removeAttribute("src"); }
+        mVideo.hidden = false;
+        mVideo.poster = a.getAttribute("data-poster");
+        mVideo.src = a.getAttribute("data-src");
+        mVideo.setAttribute("aria-label", a.getAttribute("data-title"));
+      }
       mTitle.textContent = a.getAttribute("data-title");
       mTag.textContent = a.getAttribute("data-tag") || "";
       mCredit.textContent = a.getAttribute("data-credit") || "";
@@ -178,8 +189,10 @@
         if (href) { mLink.href = href; mLink.textContent = (a.getAttribute("data-link-label") || "Watch original") + " \u2197"; mLink.hidden = false; }
         else { mLink.hidden = true; mLink.removeAttribute("href"); }
       }
-      var p = mVideo.play();
-      if (p && p.catch) p.catch(function () { /* autoplay with sound blocked: controls are visible */ });
+      if (!yt) {
+        var p = mVideo.play();
+        if (p && p.catch) p.catch(function () { /* autoplay with sound blocked: controls are visible */ });
+      }
     };
     var openV = function (i) {
       vopener = doc.activeElement;
@@ -190,6 +203,8 @@
       mClose.focus();
     };
     var closeV = function () {
+      var cy = vmodal.querySelector("[data-vmodal-yt]");
+      if (cy) { cy.removeAttribute("src"); cy.hidden = true; }
       mVideo.pause();
       mVideo.removeAttribute("src");
       mVideo.load();
