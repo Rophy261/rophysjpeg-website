@@ -315,6 +315,11 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 .vfeature-text .vsub { margin: -4px 0 14px; font-size: clamp(16px, 1.3vw, 20px); }
 @media (max-width: 560px) { .vsub { font-size: 12px; margin-bottom: 4px; } }
 
+.vext { display: inline-block; margin-top: 8px; font-family: var(--font-mono); font-size: 13px; color: var(--white); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.vext:hover, .vext:focus-visible { color: var(--red); }
+.vmodal-meta .vext { margin-top: 4px; }
+@media (max-width: 560px) { .vext { font-size: 11px; } }
+
 /* pop-up player */
 .vmodal { position: fixed; inset: 0; z-index: 50; background: #000; display: flex; align-items: center; justify-content: center; padding: 56px 72px; }
 .vmodal[hidden] { display: none; }

@@ -172,6 +172,12 @@
       mTitle.textContent = a.getAttribute("data-title");
       mTag.textContent = a.getAttribute("data-tag") || "";
       mCredit.textContent = a.getAttribute("data-credit") || "";
+      var mLink = vmodal.querySelector("[data-vmodal-link]");
+      if (mLink) {
+        var href = a.getAttribute("data-link");
+        if (href) { mLink.href = href; mLink.textContent = (a.getAttribute("data-link-label") || "Watch original") + " \u2197"; mLink.hidden = false; }
+        else { mLink.hidden = true; mLink.removeAttribute("href"); }
+      }
       var p = mVideo.play();
       if (p && p.catch) p.catch(function () { /* autoplay with sound blocked: controls are visible */ });
     };
