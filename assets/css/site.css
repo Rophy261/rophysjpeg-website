@@ -626,7 +626,7 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 }
 
 /* Listing pages (Work, Sport): compact uniform grid with visible titles */
-.pgrid { list-style: none; margin: 0 auto; padding: 0; width: 80vw; max-width: 1400px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3vw 2.5vw; }
+.pgrid { list-style: none; margin: 0 auto; padding: 0; width: 80vw; max-width: 1040px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 28px; }
 .title-text + .pgrid, .title-image + .pgrid { margin-top: 40px; }
 .pcard-link { display: block; color: var(--white); text-decoration: none; }
 .pcard-thumb { position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #0d0d0d; }
