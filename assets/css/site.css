@@ -386,6 +386,10 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
   .vfeature-pair .vfp-gallery { width: 100%; display: flex; justify-content: center; }
 }
 
+/* Footer */
+.site-footer { padding: 48px 5vw 40px; text-align: center; }
+.site-footer p { margin: 0; font-family: var(--font-mono); font-weight: 200; font-size: 13px; letter-spacing: 0.04em; color: rgba(255, 255, 255, 0.7); }
+
 /* About */
 .about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: start; }
 .about-portrait img { width: 100%; }
