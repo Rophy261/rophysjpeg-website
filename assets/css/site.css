@@ -579,3 +579,31 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Home intro: positioning line, buttons, brands row, closing contact strip */
+.hintro { width: 90vw; max-width: 1100px; margin: 0 auto; padding: 4vw 0 4vw; text-align: center; }
+.hintro h1 { margin: 0 0 14px; color: var(--white); font-family: var(--font-main); font-weight: 400; font-size: clamp(26px, 3.2vw, 48px); line-height: 1.15; }
+.hintro-sub { margin: 0; font-family: var(--font-mono); font-weight: 200; font-size: clamp(14px, 1.2vw, 17px); line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.hintro-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 18px; }
+.hintro-btns .btn { text-decoration: none; }
+.btn-ghost { background: transparent; color: var(--white); border-color: var(--white); }
+.btn-ghost:hover:not(:disabled) { background: var(--white); color: var(--black); }
+.hbrands { list-style: none; margin: 30px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 30px; }
+.hbrands li { font-family: var(--font-main); font-size: clamp(13px, 1.1vw, 16px); letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
+.hcontact { width: 90vw; max-width: 900px; margin: 9vw auto 0; padding-top: 6vw; border-top: 1px solid rgba(255, 255, 255, 0.2); text-align: center; }
+.hcontact h2 { margin: 0 0 12px; color: var(--red); font-family: var(--font-main); font-weight: 400; font-size: clamp(26px, 3vw, 44px); line-height: 1.2; }
+.hcontact p { margin: 0; font-family: var(--font-main); font-size: clamp(16px, 1.4vw, 20px); }
+.hcontact p a { color: var(--white); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.hcontact p a:hover { color: var(--red); }
+.hcontact .btn { margin-top: 22px; text-decoration: none; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 14px; }
+.footer-links a { font-family: var(--font-mono); font-weight: 200; font-size: 13px; letter-spacing: 0.04em; color: rgba(255, 255, 255, 0.85); text-decoration: underline; text-underline-offset: 3px; }
+.footer-links a:hover { color: var(--red); }
+@media (max-width: 768px) {
+  .hintro { padding: 2vw 0 10vw; }
+  .hbrands { gap: 6px 18px; margin-top: 24px; }
+  .hcontact { margin-top: 16vw; padding-top: 12vw; }
+}
+@media (max-width: 1024px) {
+  .home-work .vgrid > li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
