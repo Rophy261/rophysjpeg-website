@@ -385,4 +385,25 @@
         .then(function () { submit.disabled = false; });
     });
   }
+  /* Home: gentle reveal-on-scroll for the featured work, cards and contact strip */
+  (function () {
+    var home = doc.querySelector(".listing.home");
+    if (!home) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var els = home.querySelectorAll(".vfeature, .hsection, .home-work .vgrid > li, .hcontact");
+    if (reduce || !("IntersectionObserver" in window)) return;
+    Array.prototype.forEach.call(els, function (el) {
+      el.classList.add("reveal");
+      if (el.matches(".vgrid > li")) {
+        var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.style.transitionDelay = (i % 3) * 110 + "ms";
+      }
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+  })();
 })();
