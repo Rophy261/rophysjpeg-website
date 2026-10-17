@@ -609,10 +609,10 @@ h1, h2, h3 { text-rendering: optimizeLegibility; font-weight: 400; }
 }
 
 /* Home motion: subtle reveal on scroll (JS adds .reveal, then .is-in) */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 800ms cubic-bezier(.2,.7,.2,1), transform 800ms cubic-bezier(.2,.7,.2,1); }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 500ms ease-out, transform 500ms ease-out; }
 .reveal.is-in { opacity: 1; transform: none; }
 .hsection.reveal { transform: none; }
-.hsection::after { content: ""; display: block; width: 56px; height: 3px; margin: 14px auto 0; background: var(--red); transform: scaleX(0); transition: transform 900ms cubic-bezier(.2,.7,.2,1) 200ms; }
+.hsection::after { content: ""; display: block; width: 56px; height: 3px; margin: 14px auto 0; background: var(--red); transform: scaleX(0); transition: transform 600ms ease-out 150ms; }
 .hsection.is-in::after, .hsection:not(.reveal)::after { transform: scaleX(1); }
 .vcard .vthumb::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 450ms ease; }
 .vcard:hover .vthumb::after, .vcard:focus-visible .vthumb::after { transform: scaleX(1); }

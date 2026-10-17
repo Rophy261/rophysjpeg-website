@@ -396,14 +396,14 @@
       el.classList.add("reveal");
       if (el.matches(".vgrid > li")) {
         var i = Array.prototype.indexOf.call(el.parentNode.children, el);
-        el.style.transitionDelay = (i % 3) * 110 + "ms";
+        el.style.transitionDelay = (i % 3) * 70 + "ms";
       }
     });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    }, { rootMargin: "0px 0px 10% 0px", threshold: 0 });
     Array.prototype.forEach.call(els, function (el) { io.observe(el); });
   })();
 })();
