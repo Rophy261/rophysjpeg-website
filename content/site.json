@@ -434,6 +434,21 @@
           "featured": false
         },
         {
+          "id": "added-video-21",
+          "src": "/media/video/video-21.mp4",
+          "poster": "/media/video/video-21-poster.jpg",
+          "source": null,
+          "poster_source": null,
+          "width": 720,
+          "height": 1280,
+          "title": "Robert Taylor: 2023 highlight mix",
+          "credit": "Commissioned by Robert Taylor. Edited by Rophy, with footage from MLS and Inter Miami CF.",
+          "tag": "Inter Miami CF",
+          "duration": 109.31,
+          "note": "Added October 2026 (re-encoded 720p H.264)",
+          "featured": false
+        },
+        {
           "id": "added-video-10",
           "src": "/media/video/video-10.mp4",
           "poster": "/media/video/video-10-poster.jpg",
