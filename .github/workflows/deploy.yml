@@ -1,0 +1,44 @@
+name: Build and deploy site
+
+# Runs whenever content changes (for example a save in Pages CMS),
+# rebuilds the HTML from content/site.json + content/editor.json and publishes it.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build site
+        run: |
+          mkdir _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude 'content' \
+                --exclude 'tools' --exclude 'src' --exclude '.pages.yml' --exclude '.gitignore' ./ _site/
+          SITE_OUT=_site python3 tools/build.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
