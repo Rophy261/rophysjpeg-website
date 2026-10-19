@@ -1,0 +1,531 @@
+# Pages CMS configuration (https://app.pagescms.org). Regenerate with: python3 tools/cms.py config
+content:
+  - name: site
+    label: Edit website
+    type: file
+    path: content/editor.json
+    format: json
+    fields:
+      - name: menu
+        label: Menu
+        description: Rename the menu tabs. Drag to reorder is not used; links stay the same.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: link
+            label: Page
+            type: select
+            readonly: true
+            options:
+              values:
+                - name: "/editorial"
+                  label: "/editorial"
+                - name: "/sport"
+                  label: "/sport"
+                - name: "/video"
+                  label: "/video"
+                - name: "/about"
+                  label: "/about"
+          - name: label
+            label: Tab name
+            type: string
+      - name: home
+        label: Home page
+        type: object
+        fields:
+          - name: featured_video
+            label: Featured video (big video at the top)
+            type: select
+            options:
+              values:
+                - name: "added-video-06"
+                  label: "Interview with 2025 NWSL Rookie of the Year Lilly Reale"
+                - name: "added-video-05"
+                  label: "Nike TOMA Invite to the NYC TOMA Finals"
+                - name: "added-video-17"
+                  label: "Haiti players name their football idols"
+                - name: "added-video-11"
+                  label: "Mexico vs. Saudi Arabia: the walkout at the Gold Cup quarterfinal"
+                - name: "added-video-08"
+                  label: "Telasco Segovia golazo vs. Necaxa"
+                - name: "added-video-12"
+                  label: "Mexico 2–0 Saudi Arabia, from the touchline"
+                - name: "added-video-20"
+                  label: "Gianluca Busio’s goal vs. Trinidad and Tobago"
+                - name: "added-video-10"
+                  label: "Postcard from Miami: Argentina fans at Hard Rock Stadium"
+                - name: "youtube-gvHInGPwi4"
+                  label: "Colo Colo Soccer Academy USA: 10-year anniversary"
+                - name: "added-video-13"
+                  label: "Alexis Vega’s message after the win"
+                - name: "added-video-09"
+                  label: "Nike TOMA Miami Invitational"
+                - name: "added-video-18"
+                  label: "Haiti strikes first, from pitch level"
+                - name: "added-video-07"
+                  label: "Lilly Reale: quick-fire questions"
+                - name: "added-video-15"
+                  label: "Alexis Vega breaks the deadlock for Mexico"
+                - name: "292179202"
+                  label: "Meet & Greet with the Italy National Team at Inter Miami Stadium"
+                - name: "307677935"
+                  label: "Austin FC Los Verdes x ABFC Miami tournament"
+                - name: "292183864"
+                  label: "Recap video at the Más+ by Messi event"
+                - name: "added-video-16"
+                  label: "Jonathan David scores for Canada"
+                - name: "292179756"
+                  label: "Football for the World Mini-Pitch Project: Jackson Elementary"
+                - name: "added-video-14"
+                  label: "Honduras celebrate a semifinal place"
+          - name: featured_gallery
+            label: Featured gallery (next to the featured video)
+            type: select
+            options:
+              values:
+                - name: "/fifa-world-cup-2026"
+                  label: "FIFA World Cup 2026"
+                - name: "/fifa-club-world-cup-2025"
+                  label: "FIFA Club World Cup 2025"
+                - name: "/inter-miami"
+                  label: "Inter Miami CF"
+                - name: "/gold-cup"
+                  label: "Concacaf Gold Cup 2025"
+                - name: "/leon-bailey"
+                  label: "Leon Bailey"
+                - name: "/hugo-ekitike"
+                  label: "Hugo Ekitike"
+                - name: "/orel-mangala"
+                  label: "Orel Mangala"
+                - name: "/christian-pulisic-portraits"
+                  label: "Christian Pulisic"
+                - name: "/personal-project-tennis"
+                  label: "Tennis Training (Personal Project)"
+                - name: "/manchester-city-x-aguero"
+                  label: "Manchester City x Agüero"
+                - name: "/admiral-2025-kits-release"
+                  label: "Admiral 2025 Kits Release"
+                - name: "/kidsuper-x-puma"
+                  label: "KidSuper x PUMA"
+                - name: "/kelsey-rose"
+                  label: "Kelsey Rose x Shaep"
+                - name: "/weston-mckennie-x-puma"
+                  label: "PUMA x Weston McKennie"
+                - name: "/montegobay-united-fc"
+                  label: "MontegoBay United FC Portraits"
+                - name: "/manchester-city-x-usa-tour"
+                  label: "Manchester City USA Tour Meet & Greet"
+                - name: "/football-for-the-world-foundation"
+                  label: "Football For The World Foundation"
+                - name: "/demario-phillips-montegobay-united-fc-24-25-signing"
+                  label: "Demario Phillips: MontegoBay United FC Signing"
+          - name: featured_gallery_label
+            label: Small label above the featured gallery title
+            type: string
+          - name: selected_work_heading
+            label: Heading above the grid
+            type: string
+          - name: selected_work
+            label: Selected Work grid (top to bottom)
+            description: Pick a gallery or a video for each box. Title, subtitle, label and link are only used for galleries (videos use their own text from the Videos section).
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {item}"
+            fields:
+              - name: item
+                label: Gallery or video
+                type: select
+                options:
+                  values:
+                    - name: "gallery:/fifa-world-cup-2026"
+                      label: "Gallery · FIFA World Cup 2026"
+                    - name: "gallery:/fifa-club-world-cup-2025"
+                      label: "Gallery · FIFA Club World Cup 2025"
+                    - name: "gallery:/inter-miami"
+                      label: "Gallery · Inter Miami CF"
+                    - name: "gallery:/gold-cup"
+                      label: "Gallery · Concacaf Gold Cup 2025"
+                    - name: "gallery:/leon-bailey"
+                      label: "Gallery · Leon Bailey"
+                    - name: "gallery:/hugo-ekitike"
+                      label: "Gallery · Hugo Ekitike"
+                    - name: "gallery:/orel-mangala"
+                      label: "Gallery · Orel Mangala"
+                    - name: "gallery:/christian-pulisic-portraits"
+                      label: "Gallery · Christian Pulisic"
+                    - name: "gallery:/personal-project-tennis"
+                      label: "Gallery · Tennis Training (Personal Project)"
+                    - name: "gallery:/manchester-city-x-aguero"
+                      label: "Gallery · Manchester City x Agüero"
+                    - name: "gallery:/admiral-2025-kits-release"
+                      label: "Gallery · Admiral 2025 Kits Release"
+                    - name: "gallery:/kidsuper-x-puma"
+                      label: "Gallery · KidSuper x PUMA"
+                    - name: "gallery:/kelsey-rose"
+                      label: "Gallery · Kelsey Rose x Shaep"
+                    - name: "gallery:/weston-mckennie-x-puma"
+                      label: "Gallery · PUMA x Weston McKennie"
+                    - name: "gallery:/montegobay-united-fc"
+                      label: "Gallery · MontegoBay United FC Portraits"
+                    - name: "gallery:/manchester-city-x-usa-tour"
+                      label: "Gallery · Manchester City USA Tour Meet & Greet"
+                    - name: "gallery:/football-for-the-world-foundation"
+                      label: "Gallery · Football For The World Foundation"
+                    - name: "gallery:/demario-phillips-montegobay-united-fc-24-25-signing"
+                      label: "Gallery · Demario Phillips: MontegoBay United FC Signing"
+                    - name: "video:added-video-06"
+                      label: "Video · Interview with 2025 NWSL Rookie of the Year Lilly Reale"
+                    - name: "video:added-video-05"
+                      label: "Video · Nike TOMA Invite to the NYC TOMA Finals"
+                    - name: "video:added-video-17"
+                      label: "Video · Haiti players name their football idols"
+                    - name: "video:added-video-11"
+                      label: "Video · Mexico vs. Saudi Arabia: the walkout at the Gold Cup quarterfinal"
+                    - name: "video:added-video-08"
+                      label: "Video · Telasco Segovia golazo vs. Necaxa"
+                    - name: "video:added-video-12"
+                      label: "Video · Mexico 2–0 Saudi Arabia, from the touchline"
+                    - name: "video:added-video-20"
+                      label: "Video · Gianluca Busio’s goal vs. Trinidad and Tobago"
+                    - name: "video:added-video-10"
+                      label: "Video · Postcard from Miami: Argentina fans at Hard Rock Stadium"
+                    - name: "video:youtube-gvHInGPwi4"
+                      label: "Video · Colo Colo Soccer Academy USA: 10-year anniversary"
+                    - name: "video:added-video-13"
+                      label: "Video · Alexis Vega’s message after the win"
+                    - name: "video:added-video-09"
+                      label: "Video · Nike TOMA Miami Invitational"
+                    - name: "video:added-video-18"
+                      label: "Video · Haiti strikes first, from pitch level"
+                    - name: "video:added-video-07"
+                      label: "Video · Lilly Reale: quick-fire questions"
+                    - name: "video:added-video-15"
+                      label: "Video · Alexis Vega breaks the deadlock for Mexico"
+                    - name: "video:292179202"
+                      label: "Video · Meet & Greet with the Italy National Team at Inter Miami Stadium"
+                    - name: "video:307677935"
+                      label: "Video · Austin FC Los Verdes x ABFC Miami tournament"
+                    - name: "video:292183864"
+                      label: "Video · Recap video at the Más+ by Messi event"
+                    - name: "video:added-video-16"
+                      label: "Video · Jonathan David scores for Canada"
+                    - name: "video:292179756"
+                      label: "Video · Football for the World Mini-Pitch Project: Jackson Elementary"
+                    - name: "video:added-video-14"
+                      label: "Video · Honduras celebrate a semifinal place"
+              - name: title
+                label: Title (galleries only, leave empty to use the gallery title)
+                type: string
+              - name: subtitle
+                label: Subtitle (galleries only)
+                type: string
+              - name: label
+                label: Small red label (galleries only), e.g. Photo · PUMA
+                type: string
+              - name: link_label
+                label: Extra link text (optional), e.g. See the post on Instagram
+                type: string
+              - name: link_url
+                label: Extra link address (optional)
+                type: string
+          - name: contact_heading
+            label: Bottom contact section heading
+            type: string
+          - name: contact_email
+            label: Email shown at the bottom
+            type: string
+          - name: contact_button
+            label: Bottom button text
+            type: string
+      - name: work
+        label: Work page
+        type: object
+        fields:
+          - name: heading
+            label: Page heading
+            type: string
+          - name: galleries
+            label: Galleries on the Work page (top to bottom)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {gallery}"
+            fields:
+              - name: gallery
+                label: Gallery
+                type: select
+                options:
+                  values:
+                    - name: "/fifa-world-cup-2026"
+                      label: "FIFA World Cup 2026"
+                    - name: "/fifa-club-world-cup-2025"
+                      label: "FIFA Club World Cup 2025"
+                    - name: "/inter-miami"
+                      label: "Inter Miami CF"
+                    - name: "/gold-cup"
+                      label: "Concacaf Gold Cup 2025"
+                    - name: "/leon-bailey"
+                      label: "Leon Bailey"
+                    - name: "/hugo-ekitike"
+                      label: "Hugo Ekitike"
+                    - name: "/orel-mangala"
+                      label: "Orel Mangala"
+                    - name: "/christian-pulisic-portraits"
+                      label: "Christian Pulisic"
+                    - name: "/personal-project-tennis"
+                      label: "Tennis Training (Personal Project)"
+                    - name: "/manchester-city-x-aguero"
+                      label: "Manchester City x Agüero"
+                    - name: "/admiral-2025-kits-release"
+                      label: "Admiral 2025 Kits Release"
+                    - name: "/kidsuper-x-puma"
+                      label: "KidSuper x PUMA"
+                    - name: "/kelsey-rose"
+                      label: "Kelsey Rose x Shaep"
+                    - name: "/weston-mckennie-x-puma"
+                      label: "PUMA x Weston McKennie"
+                    - name: "/montegobay-united-fc"
+                      label: "MontegoBay United FC Portraits"
+                    - name: "/manchester-city-x-usa-tour"
+                      label: "Manchester City USA Tour Meet & Greet"
+                    - name: "/football-for-the-world-foundation"
+                      label: "Football For The World Foundation"
+                    - name: "/demario-phillips-montegobay-united-fc-24-25-signing"
+                      label: "Demario Phillips: MontegoBay United FC Signing"
+      - name: sport
+        label: Sport page
+        type: object
+        fields:
+          - name: heading
+            label: Page heading
+            type: string
+          - name: galleries
+            label: Galleries on the Sport page (top to bottom)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{index}. {gallery}"
+            fields:
+              - name: gallery
+                label: Gallery
+                type: select
+                options:
+                  values:
+                    - name: "/fifa-world-cup-2026"
+                      label: "FIFA World Cup 2026"
+                    - name: "/fifa-club-world-cup-2025"
+                      label: "FIFA Club World Cup 2025"
+                    - name: "/inter-miami"
+                      label: "Inter Miami CF"
+                    - name: "/gold-cup"
+                      label: "Concacaf Gold Cup 2025"
+                    - name: "/leon-bailey"
+                      label: "Leon Bailey"
+                    - name: "/hugo-ekitike"
+                      label: "Hugo Ekitike"
+                    - name: "/orel-mangala"
+                      label: "Orel Mangala"
+                    - name: "/christian-pulisic-portraits"
+                      label: "Christian Pulisic"
+                    - name: "/personal-project-tennis"
+                      label: "Tennis Training (Personal Project)"
+                    - name: "/manchester-city-x-aguero"
+                      label: "Manchester City x Agüero"
+                    - name: "/admiral-2025-kits-release"
+                      label: "Admiral 2025 Kits Release"
+                    - name: "/kidsuper-x-puma"
+                      label: "KidSuper x PUMA"
+                    - name: "/kelsey-rose"
+                      label: "Kelsey Rose x Shaep"
+                    - name: "/weston-mckennie-x-puma"
+                      label: "PUMA x Weston McKennie"
+                    - name: "/montegobay-united-fc"
+                      label: "MontegoBay United FC Portraits"
+                    - name: "/manchester-city-x-usa-tour"
+                      label: "Manchester City USA Tour Meet & Greet"
+                    - name: "/football-for-the-world-foundation"
+                      label: "Football For The World Foundation"
+                    - name: "/demario-phillips-montegobay-united-fc-24-25-signing"
+                      label: "Demario Phillips: MontegoBay United FC Signing"
+      - name: galleries
+        label: Gallery text (titles and intros)
+        description: The photos themselves are managed separately; this edits the words.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: gallery
+            label: Gallery page
+            type: select
+            readonly: true
+            options:
+              values:
+                - name: "/fifa-world-cup-2026"
+                  label: "FIFA World Cup 2026"
+                - name: "/fifa-club-world-cup-2025"
+                  label: "FIFA Club World Cup 2025"
+                - name: "/inter-miami"
+                  label: "Inter Miami CF"
+                - name: "/gold-cup"
+                  label: "Concacaf Gold Cup 2025"
+                - name: "/leon-bailey"
+                  label: "Leon Bailey"
+                - name: "/hugo-ekitike"
+                  label: "Hugo Ekitike"
+                - name: "/orel-mangala"
+                  label: "Orel Mangala"
+                - name: "/christian-pulisic-portraits"
+                  label: "Christian Pulisic"
+                - name: "/personal-project-tennis"
+                  label: "Tennis Training (Personal Project)"
+                - name: "/manchester-city-x-aguero"
+                  label: "Manchester City x Agüero"
+                - name: "/admiral-2025-kits-release"
+                  label: "Admiral 2025 Kits Release"
+                - name: "/kidsuper-x-puma"
+                  label: "KidSuper x PUMA"
+                - name: "/kelsey-rose"
+                  label: "Kelsey Rose x Shaep"
+                - name: "/weston-mckennie-x-puma"
+                  label: "PUMA x Weston McKennie"
+                - name: "/montegobay-united-fc"
+                  label: "MontegoBay United FC Portraits"
+                - name: "/manchester-city-x-usa-tour"
+                  label: "Manchester City USA Tour Meet & Greet"
+                - name: "/football-for-the-world-foundation"
+                  label: "Football For The World Foundation"
+                - name: "/demario-phillips-montegobay-united-fc-24-25-signing"
+                  label: "Demario Phillips: MontegoBay United FC Signing"
+          - name: title
+            label: Title
+            type: string
+          - name: label
+            label: Small red label above the title (optional)
+            type: string
+          - name: intro
+            label: Intro text (optional, shown in a box above the photos)
+            type: text
+          - name: link_label
+            label: Link text (optional), e.g. See the published post on Instagram
+            type: string
+          - name: link_url
+            label: Link address (optional)
+            type: string
+      - name: videos
+        label: Videos (Video page order, top to bottom)
+        description: The first video in this list is not automatically featured; pick the featured video under Home page.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{index}. {title}"
+        fields:
+          - name: video
+            label: Video file
+            type: select
+            readonly: true
+            options:
+              values:
+                - name: "added-video-06"
+                  label: "Interview with 2025 NWSL Rookie of the Year Lilly Reale"
+                - name: "added-video-05"
+                  label: "Nike TOMA Invite to the NYC TOMA Finals"
+                - name: "added-video-17"
+                  label: "Haiti players name their football idols"
+                - name: "added-video-11"
+                  label: "Mexico vs. Saudi Arabia: the walkout at the Gold Cup quarterfinal"
+                - name: "added-video-08"
+                  label: "Telasco Segovia golazo vs. Necaxa"
+                - name: "added-video-12"
+                  label: "Mexico 2–0 Saudi Arabia, from the touchline"
+                - name: "added-video-20"
+                  label: "Gianluca Busio’s goal vs. Trinidad and Tobago"
+                - name: "added-video-10"
+                  label: "Postcard from Miami: Argentina fans at Hard Rock Stadium"
+                - name: "youtube-gvHInGPwi4"
+                  label: "Colo Colo Soccer Academy USA: 10-year anniversary"
+                - name: "added-video-13"
+                  label: "Alexis Vega’s message after the win"
+                - name: "added-video-09"
+                  label: "Nike TOMA Miami Invitational"
+                - name: "added-video-18"
+                  label: "Haiti strikes first, from pitch level"
+                - name: "added-video-07"
+                  label: "Lilly Reale: quick-fire questions"
+                - name: "added-video-15"
+                  label: "Alexis Vega breaks the deadlock for Mexico"
+                - name: "292179202"
+                  label: "Meet & Greet with the Italy National Team at Inter Miami Stadium"
+                - name: "307677935"
+                  label: "Austin FC Los Verdes x ABFC Miami tournament"
+                - name: "292183864"
+                  label: "Recap video at the Más+ by Messi event"
+                - name: "added-video-16"
+                  label: "Jonathan David scores for Canada"
+                - name: "292179756"
+                  label: "Football for the World Mini-Pitch Project: Jackson Elementary"
+                - name: "added-video-14"
+                  label: "Honduras celebrate a semifinal place"
+          - name: show
+            label: Show on the site
+            type: boolean
+          - name: title
+            label: Title
+            type: string
+          - name: subtitle
+            label: Subtitle (optional)
+            type: string
+          - name: credit
+            label: Credit line, e.g. Filmed and edited by Rophy.
+            type: string
+          - name: label
+            label: Small red label, e.g. Concacaf Gold Cup
+            type: string
+          - name: link_label
+            label: Link text (optional), e.g. Watch on TikTok
+            type: string
+          - name: link_url
+            label: Link address (optional)
+            type: string
+      - name: contact
+        label: Contact page
+        type: object
+        fields:
+          - name: heading
+            label: Main heading
+            type: string
+          - name: bio
+            label: Bio (leave an empty line between paragraphs)
+            type: text
+          - name: services_heading
+            label: Services heading
+            type: string
+          - name: services
+            label: Services
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: text
+                label: Text
+                type: text
+          - name: form_heading
+            label: Contact form heading
+            type: string
+          - name: form_text
+            label: Text above the form (email addresses become links)
+            type: text
