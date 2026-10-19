@@ -201,8 +201,7 @@ def apply(site, ed):
             if vid not in seen:
                 (shown if v in vp["videos"] else hidden).append(v)
         for i, v in enumerate(shown, 1):
-            if "order" in v:
-                v["order"] = i
+            v["order"] = i
         vp["videos"] = shown
         vp["_removed_videos"] = hidden
     vids = {v["id"] for v in vp["videos"]}
