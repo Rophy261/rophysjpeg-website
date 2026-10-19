@@ -1,5 +1,4 @@
 {
-  "_note": "Edited with Pages CMS. tools/build.py applies these values on top of site.json.",
   "menu": [
     {
       "link": "/editorial",
@@ -28,33 +27,19 @@
         "item": "gallery:/fifa-world-cup-2026",
         "title": "FIFA World Cup 2026",
         "subtitle": "Lionel Messi, England v France and Uruguay v Cabo Verde",
-        "label": "Photo · Sports",
-        "link_label": "",
-        "link_url": ""
+        "label": "Photo · Sports"
       },
       {
-        "item": "video:added-video-11",
-        "title": "",
-        "subtitle": "",
-        "label": "",
-        "link_label": "",
-        "link_url": ""
+        "item": "video:added-video-11"
       },
       {
         "item": "gallery:/weston-mckennie-x-puma",
         "title": "PUMA x Weston McKennie",
         "subtitle": "The Next Wave, in Florida with the FUTURE 9",
-        "label": "Photo · PUMA",
-        "link_label": "",
-        "link_url": ""
+        "label": "Photo · PUMA"
       },
       {
-        "item": "video:added-video-17",
-        "title": "",
-        "subtitle": "",
-        "label": "",
-        "link_label": "",
-        "link_url": ""
+        "item": "video:added-video-17"
       },
       {
         "item": "gallery:/manchester-city-x-aguero",
@@ -65,36 +50,22 @@
         "link_url": "https://www.instagram.com/p/CuPgslkMWct/"
       },
       {
-        "item": "video:added-video-05",
-        "title": "",
-        "subtitle": "",
-        "label": "",
-        "link_label": "",
-        "link_url": ""
+        "item": "video:added-video-05"
       },
       {
         "item": "gallery:/fifa-club-world-cup-2025",
         "title": "FIFA Club World Cup 2025",
         "subtitle": "Real Madrid v Juventus",
-        "label": "Photo · Sports",
-        "link_label": "",
-        "link_url": ""
+        "label": "Photo · Sports"
       },
       {
-        "item": "video:added-video-08",
-        "title": "",
-        "subtitle": "",
-        "label": "",
-        "link_label": "",
-        "link_url": ""
+        "item": "video:added-video-08"
       },
       {
         "item": "gallery:/gold-cup",
         "title": "Concacaf Gold Cup 2025",
         "subtitle": "Shot for Concacaf: matches, fans and locker-room access",
-        "label": "Photo · Sports",
-        "link_label": "",
-        "link_url": ""
+        "label": "Photo · Sports"
       }
     ],
     "contact_heading": "Let’s Work Together",
@@ -168,75 +139,39 @@
   "galleries": [
     {
       "gallery": "/fifa-world-cup-2026",
-      "title": "FIFA World Cup 2026",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "FIFA World Cup 2026"
     },
     {
       "gallery": "/fifa-club-world-cup-2025",
-      "title": "FIFA Club World Cup 2025",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "FIFA Club World Cup 2025"
     },
     {
       "gallery": "/inter-miami",
-      "title": "Inter Miami CF",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Inter Miami CF"
     },
     {
       "gallery": "/gold-cup",
-      "title": "Concacaf Gold Cup 2025",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Concacaf Gold Cup 2025"
     },
     {
       "gallery": "/leon-bailey",
-      "title": "Leon Bailey",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Leon Bailey"
     },
     {
       "gallery": "/hugo-ekitike",
-      "title": "Hugo Ekitike",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Hugo Ekitike"
     },
     {
       "gallery": "/orel-mangala",
-      "title": "Orel Mangala",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Orel Mangala"
     },
     {
       "gallery": "/christian-pulisic-portraits",
-      "title": "Christian Pulisic",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Christian Pulisic"
     },
     {
       "gallery": "/personal-project-tennis",
-      "title": "Tennis Training (Personal Project)",
-      "label": "",
-      "intro": "",
-      "link_label": "",
-      "link_url": ""
+      "title": "Tennis Training (Personal Project)"
     },
     {
       "gallery": "/manchester-city-x-aguero",
@@ -250,9 +185,7 @@
       "gallery": "/admiral-2025-kits-release",
       "title": "Admiral 2025 Kits Release",
       "label": "Admiral",
-      "intro": "Admiral unveiled its 2025 kits for multiple clubs. This campaign pairs studio lookbook portraits with close-up product details on bold color backdrops, built to let each design stand out.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "Admiral unveiled its 2025 kits for multiple clubs. This campaign pairs studio lookbook portraits with close-up product details on bold color backdrops, built to let each design stand out."
     },
     {
       "gallery": "/kidsuper-x-puma",
@@ -266,251 +199,195 @@
       "gallery": "/kelsey-rose",
       "title": "Kelsey Rose x Shaep",
       "label": "Shaep · Fitness",
-      "intro": "Shot for Shaep, Kelsey Rose’s fitness app: a natural-light studio session across four activewear looks, mixing strength work, mobility and portraits.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "Shot for Shaep, Kelsey Rose’s fitness app: a natural-light studio session across four activewear looks, mixing strength work, mobility and portraits."
     },
     {
       "gallery": "/weston-mckennie-x-puma",
       "title": "PUMA x Weston McKennie",
       "label": "The Next Wave · FUTURE 9",
-      "intro": "The Next Wave: PUMA Gathers the Stars of the Future, brought to Florida with Weston McKennie. A day of training with young players, interviews and a meet-and-greet, featuring the PUMA FUTURE 9 boot.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "The Next Wave: PUMA Gathers the Stars of the Future, brought to Florida with Weston McKennie. A day of training with young players, interviews and a meet-and-greet, featuring the PUMA FUTURE 9 boot."
     },
     {
       "gallery": "/montegobay-united-fc",
       "title": "MontegoBay United FC Portraits",
       "label": "MontegoBay United FC",
-      "intro": "Player portraits for Jamaican club MontegoBay United FC, featuring the home, away and goalkeeper kits.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "Player portraits for Jamaican club MontegoBay United FC, featuring the home, away and goalkeeper kits."
     },
     {
       "gallery": "/manchester-city-x-usa-tour",
       "title": "Manchester City USA Tour Meet & Greet",
       "label": "Manchester City · Pelé Soccer",
-      "intro": "Manchester City players met fans at a Pelé Soccer signing during the club’s USA tour: autographs, photos and young supporters in sky blue.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "Manchester City players met fans at a Pelé Soccer signing during the club’s USA tour: autographs, photos and young supporters in sky blue."
     },
     {
       "gallery": "/football-for-the-world-foundation",
       "title": "Football For The World Foundation",
       "label": "Football For The World",
-      "intro": "A week in Jamaica with the Football For The World Foundation, documenting school visits, community games and the young players at the heart of their work.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "A week in Jamaica with the Football For The World Foundation, documenting school visits, community games and the young players at the heart of their work."
     },
     {
       "gallery": "/demario-phillips-montegobay-united-fc-24-25-signing",
       "title": "Demario Phillips: MontegoBay United FC Signing",
       "label": "MontegoBay United FC",
-      "intro": "Signing-day portraits of Demario Phillips joining MontegoBay United FC for the 2024/25 season.",
-      "link_label": "",
-      "link_url": ""
+      "intro": "Signing-day portraits of Demario Phillips joining MontegoBay United FC for the 2024/25 season."
     }
   ],
   "videos": [
     {
       "video": "added-video-06",
+      "show": true,
       "title": "Interview with 2025 NWSL Rookie of the Year Lilly Reale",
       "subtitle": "Pelé Soccer Shop interview hosted by Mickey at the PUMA FUTURE 9 event",
       "credit": "Filmed and edited by Rophy.",
-      "label": "PUMA · Pelé Soccer",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "PUMA · Pelé Soccer"
     },
     {
       "video": "added-video-05",
+      "show": true,
       "title": "Nike TOMA Invite to the NYC TOMA Finals",
-      "subtitle": "",
       "credit": "Filmed by Rophy, edited by El Johnson.",
-      "label": "Nike",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Nike"
     },
     {
       "video": "added-video-17",
+      "show": true,
       "title": "Haiti players name their football idols",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 302K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7516204502429502751",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7516204502429502751"
     },
     {
       "video": "added-video-11",
+      "show": true,
       "title": "Mexico vs. Saudi Arabia: the walkout at the Gold Cup quarterfinal",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 489K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521194603853188383",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521194603853188383"
     },
     {
       "video": "added-video-08",
+      "show": true,
       "title": "Telasco Segovia golazo vs. Necaxa",
-      "subtitle": "",
       "credit": "Filmed and edited by Rophy.",
-      "label": "Inter Miami CF",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Inter Miami CF"
     },
     {
       "video": "added-video-12",
+      "show": true,
       "title": "Mexico 2–0 Saudi Arabia, from the touchline",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 390K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521220416359107870",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521220416359107870"
     },
     {
       "video": "added-video-20",
-      "title": "Gianluca Busio’s goal vs. Trinidad and Tobago",
-      "subtitle": "",
+      "show": true,
+      "title": "Gianluca Busio’s goal cele vs. Trinidad and Tobago",
       "credit": "Filmed and edited by Rophy.",
-      "label": "Concacaf Gold Cup",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Concacaf Gold Cup"
     },
     {
       "video": "added-video-10",
+      "show": true,
       "title": "Postcard from Miami: Argentina fans at Hard Rock Stadium",
-      "subtitle": "",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "credit": "Filmed and edited by Rophy."
     },
     {
       "video": "youtube-gvHInGPwi4",
+      "show": true,
       "title": "Colo Colo Soccer Academy USA: 10-year anniversary",
-      "subtitle": "",
       "credit": "Filmed by Rophy and Shane Malcolm, edited by Rophy.",
       "label": "Colo Colo Soccer Academy USA",
       "link_label": "Watch on YouTube",
-      "link_url": "https://www.youtube.com/watch?v=-gvHInGPwi4",
-      "show": true
+      "link_url": "https://www.youtube.com/watch?v=-gvHInGPwi4"
     },
     {
       "video": "added-video-13",
+      "show": true,
       "title": "Alexis Vega’s message after the win",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 227K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521285205491993886",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521285205491993886"
     },
     {
       "video": "added-video-09",
+      "show": true,
       "title": "Nike TOMA Miami Invitational",
-      "subtitle": "",
       "credit": "Filmed and edited by Rophy.",
-      "label": "Nike",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Nike"
     },
     {
       "video": "added-video-18",
+      "show": true,
       "title": "Haiti strikes first, from pitch level",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 32K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7517817414768168223",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7517817414768168223"
     },
     {
       "video": "added-video-07",
+      "show": true,
       "title": "Lilly Reale: quick-fire questions",
-      "subtitle": "",
       "credit": "Filmed and edited by Rophy.",
-      "label": "PUMA · Pelé Soccer",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "PUMA · Pelé Soccer"
     },
     {
       "video": "added-video-15",
+      "show": true,
       "title": "Alexis Vega breaks the deadlock for Mexico",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 83K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521214486519221534",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521214486519221534"
     },
     {
       "video": "292179202",
+      "show": true,
       "title": "Meet & Greet with the Italy National Team at Inter Miami Stadium",
-      "subtitle": "",
       "credit": "Filmed and edited by Rophy.",
-      "label": "Italy National Team",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Italy National Team"
     },
     {
       "video": "307677935",
+      "show": true,
       "title": "Austin FC Los Verdes x ABFC Miami tournament",
-      "subtitle": "",
       "credit": "Filmed and edited by Rophy.",
-      "label": "Austin FC",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Austin FC"
     },
     {
       "video": "292183864",
+      "show": true,
       "title": "Recap video at the Más+ by Messi event",
-      "subtitle": "",
       "credit": "Filmed and edited by Rophy.",
-      "label": "Más+ by Messi",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Más+ by Messi"
     },
     {
       "video": "added-video-16",
+      "show": true,
       "title": "Jonathan David scores for Canada",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 61K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7519728225782631711",
-      "show": true
+      "link_url": "https://www.tiktok.com/@concacaf/video/7519728225782631711"
     },
     {
       "video": "292179756",
+      "show": true,
       "title": "Football for the World Mini-Pitch Project: Jackson Elementary",
-      "subtitle": "",
       "credit": "Filmed by Shane Malcolm, edited by Rophy.",
-      "label": "Football for the World",
-      "link_label": "",
-      "link_url": "",
-      "show": true
+      "label": "Football for the World"
     },
     {
       "video": "added-video-14",
+      "show": false,
       "title": "Honduras celebrate a semifinal place",
-      "subtitle": "",
       "credit": "Filmed by Rophy for Concacaf. 188K views on Concacaf’s TikTok.",
-      "label": "Concacaf Gold Cup",
-      "link_label": "",
-      "link_url": "",
-      "show": false
+      "label": "Concacaf Gold Cup"
     }
   ],
   "contact": {
