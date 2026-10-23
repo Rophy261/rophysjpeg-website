@@ -251,20 +251,18 @@
       "link_url": "https://www.tiktok.com/@concacaf/video/7521194603853188383"
     },
     {
+      "video": "added-video-20",
+      "show": true,
+      "title": "Gianluca Busio’s goal cele vs. Trinidad and Tobago",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "Concacaf Gold Cup 23'"
+    },
+    {
       "video": "added-video-05",
       "show": true,
       "title": "Nike TOMA Invite to the NYC TOMA Finals",
       "credit": "Filmed by Rophy, edited by El Johnson.",
       "label": "Nike"
-    },
-    {
-      "video": "added-video-12",
-      "show": true,
-      "title": "Mexico 2–0 Saudi Arabia, from the touchline",
-      "credit": "Filmed by Rophy for Concacaf. 390K views on Concacaf’s TikTok.",
-      "label": "Concacaf Gold Cup",
-      "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521220416359107870"
     },
     {
       "video": "added-video-17",
@@ -274,57 +272,6 @@
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
       "link_url": "https://www.tiktok.com/@concacaf/video/7516204502429502751"
-    },
-    {
-      "video": "added-video-09",
-      "show": true,
-      "title": "Nike TOMA Miami Invitational",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "Nike"
-    },
-    {
-      "video": "added-video-13",
-      "show": true,
-      "title": "Alexis Vega’s message after the win",
-      "credit": "Filmed by Rophy for Concacaf. 227K views on Concacaf’s TikTok.",
-      "label": "Concacaf Gold Cup",
-      "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521285205491993886"
-    },
-    {
-      "video": "292183864",
-      "show": true,
-      "title": "Recap video at the Más+ by Messi event",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "Más+ by Messi"
-    },
-    {
-      "video": "added-video-20",
-      "show": true,
-      "title": "Gianluca Busio’s goal cele vs. Trinidad and Tobago",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "Concacaf Gold Cup 23'"
-    },
-    {
-      "video": "added-video-07",
-      "show": true,
-      "title": "Lilly Reale: quick-fire questions",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "PUMA · Pelé Soccer"
-    },
-    {
-      "video": "292179202",
-      "show": true,
-      "title": "Meet & Greet with the Italy National Team at Inter Miami Stadium",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "Italy National Team"
-    },
-    {
-      "video": "added-video-08",
-      "show": true,
-      "title": "Telasco Segovia golazo vs. Necaxa",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "Inter Miami CF"
     },
     {
       "video": "added-video-21",
@@ -337,13 +284,65 @@
       "show": true
     },
     {
-      "video": "added-video-15",
+      "video": "added-video-07",
       "show": true,
-      "title": "Alexis Vega breaks the deadlock for Mexico",
-      "credit": "Filmed by Rophy for Concacaf. 83K views on Concacaf’s TikTok.",
+      "title": "Lilly Reale: quick-fire questions",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "PUMA · Pelé Soccer"
+    },
+    {
+      "video": "added-video-08",
+      "show": true,
+      "title": "Telasco Segovia golazo vs. Necaxa",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "Inter Miami CF"
+    },
+    {
+      "video": "292179202",
+      "show": true,
+      "title": "Meet & Greet with the Italy National Team at Inter Miami Stadium",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "Italy National Team"
+    },
+    {
+      "video": "added-video-09",
+      "show": true,
+      "title": "Nike TOMA Miami Invitational",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "Nike"
+    },
+    {
+      "video": "added-video-12",
+      "show": true,
+      "title": "Mexico 2–0 Saudi Arabia, from the touchline",
+      "credit": "Filmed by Rophy for Concacaf. 390K views on Concacaf’s TikTok.",
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
-      "link_url": "https://www.tiktok.com/@concacaf/video/7521214486519221534"
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521220416359107870"
+    },
+    {
+      "video": "307677935",
+      "show": true,
+      "title": "Austin FC Los Verdes x ABFC Miami tournament",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "Austin FC"
+    },
+    {
+      "video": "292183864",
+      "show": true,
+      "title": "Recap video at the Más+ by Messi event",
+      "credit": "Filmed and edited by Rophy.",
+      "label": "Más+ by Messi"
+    },
+    {
+      "video": "added-video-22",
+      "title": "Florida Christian School boys soccer: season opener hype video",
+      "subtitle": "",
+      "credit": "Filmed and edited by Rophy during the team’s media days.",
+      "label": "Florida Christian School",
+      "link_label": "",
+      "link_url": "",
+      "show": true
     },
     {
       "video": "added-video-16",
@@ -353,6 +352,24 @@
       "label": "Concacaf Gold Cup",
       "link_label": "Watch on TikTok",
       "link_url": "https://www.tiktok.com/@concacaf/video/7519728225782631711"
+    },
+    {
+      "video": "added-video-13",
+      "show": true,
+      "title": "Alexis Vega’s message after the win",
+      "credit": "Filmed by Rophy for Concacaf. 227K views on Concacaf’s TikTok.",
+      "label": "Concacaf Gold Cup",
+      "link_label": "Watch on TikTok",
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521285205491993886"
+    },
+    {
+      "video": "added-video-15",
+      "show": true,
+      "title": "Alexis Vega breaks the deadlock for Mexico",
+      "credit": "Filmed by Rophy for Concacaf. 83K views on Concacaf’s TikTok.",
+      "label": "Concacaf Gold Cup",
+      "link_label": "Watch on TikTok",
+      "link_url": "https://www.tiktok.com/@concacaf/video/7521214486519221534"
     },
     {
       "video": "added-video-18",
@@ -370,13 +387,6 @@
       "credit": "Filmed and edited by Rophy."
     },
     {
-      "video": "307677935",
-      "show": true,
-      "title": "Austin FC Los Verdes x ABFC Miami tournament",
-      "credit": "Filmed and edited by Rophy.",
-      "label": "Austin FC"
-    },
-    {
       "video": "youtube-gvHInGPwi4",
       "show": true,
       "title": "Colo Colo Soccer Academy USA: 10-year anniversary",
@@ -384,16 +394,6 @@
       "label": "Colo Colo Soccer Academy USA",
       "link_label": "Watch on YouTube",
       "link_url": "https://www.youtube.com/watch?v=-gvHInGPwi4"
-    },
-    {
-      "video": "added-video-22",
-      "title": "Florida Christian School boys soccer: season opener hype video",
-      "subtitle": "",
-      "credit": "Filmed and edited by Rophy during the team’s media days.",
-      "label": "Florida Christian School",
-      "link_label": "",
-      "link_url": "",
-      "show": true
     },
     {
       "video": "292179756",
