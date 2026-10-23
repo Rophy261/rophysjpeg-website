@@ -449,6 +449,21 @@
           "featured": false
         },
         {
+          "id": "added-video-22",
+          "src": "/media/video/video-22.mp4",
+          "poster": "/media/video/video-22-poster.jpg",
+          "source": null,
+          "poster_source": null,
+          "width": 720,
+          "height": 960,
+          "title": "Florida Christian School boys soccer: season opener hype video",
+          "credit": "Filmed and edited by Rophy during the team’s media days.",
+          "tag": "Florida Christian School",
+          "duration": 34.66,
+          "note": "Added October 2026 (Video-3560.mp4, remuxed for fast start)",
+          "featured": false
+        },
+        {
           "id": "added-video-10",
           "src": "/media/video/video-10.mp4",
           "poster": "/media/video/video-10-poster.jpg",
